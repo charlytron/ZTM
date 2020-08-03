@@ -1,0 +1,16 @@
+{
+  "folders": [
+	{
+		"path": "../../Ch-4-HTML-5"
+	},
+	{
+		"path": "../../Ch-5-Adv-HTML"
+	},
+	{
+		"path": ".."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Ch-6-CSS"
+  }
+}

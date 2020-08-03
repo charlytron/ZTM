@@ -1,0 +1,44 @@
+body {
+  background-image: url(https://www.dropbox.com/s/bazumiotbmntjv5/worley.jpg?raw=1);
+  background-size: cover;
+}
+
+h2 {
+  color: red;
+  text-align: center;
+  font-family: "Poiret One", cursive;
+}
+
+img {
+  float: left;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  color: #080303;
+  text-align: center;
+  border: 5px solid #f1c5dd;
+  cursor: pointer;
+  line-height: 15px;
+  font-family: "Poiret One", cursive;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 100%;
+  background-color: gainsboro;
+  /* font-style: italic; */
+}
+
+footer {
+  clear: both;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
