@@ -173,52 +173,72 @@ Promise.all([promise, promise2, promise3, promise4]).then(values => {
 ```
 
 The console waits until **all** of the promises above are resolved, then
-returns the values of each simultaneously. What's above is a bit academic, 
+returns the values of each simultaneously. What's above is a bit academic,
 so here's a more real world example, using the **jsonplaceholder** API:
 
 ```js
 const urls = [
-'https://jsonplaceholder.typicode.com/users',
-'https://jsonplaceholder.typicode.com/posts',
-'https://jsonplaceholder.typicode.com/albums',
+  'https://jsonplaceholder.typicode.com/users',
+  'https://jsonplaceholder.typicode.com/posts',
+  'https://jsonplaceholder.typicode.com/albums'
 ]
 ```
+
 How can we grab all of these, all important for the profile page of our user?
-Using promises, 
+Using promises,
 
 ```js
 const urls = [
-'https://jsonplaceholder.typicode.com/users',
-'https://jsonplaceholder.typicode.com/posts',
-'https://jsonplaceholder.typicode.com/albums',
+  'https://jsonplaceholder.typicode.com/users',
+  'https://jsonplaceholder.typicode.com/posts',
+  'https://jsonplaceholder.typicode.com/albums'
 ]
 
-Promise.all(urls.map(url => {
-    return fetch(url).then(resp=> resp.json())
-})).then(results => {
-    console.log(results[0])
-    console.log(results[1])
-    console.log(results[2])
+Promise.all(
+  urls.map(url => {
+    return fetch(url).then(resp => resp.json())
+  })
+).then(results => {
+  console.log(results[0])
+  console.log(results[1])
+  console.log(results[2])
 })
 ```
 
-This logs the arrays in the console, as expected.  But what if something should fail?
+This logs the arrays in the console, as expected. But what if something should fail?
 What if we misspelled a URL?
 A method to catch the error would be...
 
 ```js
 const urls = [
-'https://jsonplaceholder.typocode.com/users',
-'https://jsonplaceholder.typicode.com/posts',
-'https://jsonplaceholder.typicode.com/albums',
+  'https://jsonplaceholder.typocode.com/users',
+  'https://jsonplaceholder.typicode.com/posts',
+  'https://jsonplaceholder.typicode.com/albums'
 ]
 
-Promise.all(urls.map(url => {
-    return fetch(url).then(resp=> resp.json())
-})).then(results => {
+Promise.all(
+  urls.map(url => {
+    return fetch(url).then(resp => resp.json())
+  })
+)
+  .then(results => {
     console.log(results[0])
     console.log(results[1])
     console.log(results[2])
-}).catch(() => console.log('error'))
+  })
+  .catch(() => console.log('error'))
 ```
+
+#### At their most basic, promises are like event listeners
+
+except a promise can only succeed or fail once. It cannot do so twice.
+This is very useful for events that are **asychronous** and driven by success or failure.
+**API calls** are a good example of this. We're less interested in the amount of time that something becomes available
+than we are in reacting to the **outcome** of an asynchronous event.
+
+A promise can be in one of three possible states
+1. Fulfilled (resolved)
+1. Rejected
+1. Pending
+
 
