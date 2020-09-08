@@ -83,48 +83,51 @@ const promise = new Promise((resolve, reject) => {
 
 // grab the result and add an exclamation mark, then use chaining
 promise
-    .then(result => result + '!')
-    .then(result2 => {
-        console.log(result2);
-})
+  .then(result => result + '!')
+  .then(result2 => {
+    console.log(result2)
+  })
 ```
-##### What happens if we get an error though? (We *catch* it)
+
+##### What happens if we get an error though? (We _catch_ it)
 
 ```js
 promise
-    .then(result => result + '!')
-    .then(result2 => {
-throw Error
-        console.log(result2);
-})
-.catch(() => console.log('error'))
+  .then(result => result + '!')
+  .then(result2 => {
+    throw Error
+    console.log(result2)
+  })
+  .catch(() => console.log('error'))
 ```
-When we run this, we console log 'error'.  But what if the ```throw Error``` happens before?
+
+When we run this, we console log 'error'. But what if the `throw Error` happens before?
 
 ```js
 promise
-    .then(result => {
-        throw Error
-        return result + '!'
-    })
-    .then(result2 => {
-    console.log(result2);
-})
-.catch(() => console.log('error'))
+  .then(result => {
+    throw Error
+    return result + '!'
+  })
+  .then(result2 => {
+    console.log(result2)
+  })
+  .catch(() => console.log('error'))
 ```
-We still get the same error when we run the block in the console. ```.catch()``` catches 
-any errors that happen within a chain of ```.then()``` statements.
+
+We still get the same error when we run the block in the console. `.catch()` catches
+any errors that happen within a chain of `.then()` statements.
 
 What happens if we do the following?
 
 ```js
 promise
-    .then(result => result + '!')
-    .then(result2 => result2 + '?')
-    .catch(() => console.log('error'))
-    .then(result3 => {
-        console.log(result3 + '!');
-    })
+  .then(result => result + '!')
+  .then(result2 => result2 + '?')
+  .catch(() => console.log('error'))
+  .then(result3 => {
+    console.log(result3 + '!')
+  })
 ```
 
 The punctuation marks added in each successive .then() will be added at the end
@@ -132,11 +135,11 @@ of the resolved 'Go, man, go!', giving us 'Go, man, go!!?!' in the console.
 
 .catch() only runs if something fails within the chain, which doesn't happen here.
 
-#### Promises are great for asynchronous programming. 
+#### Promises are great for asynchronous programming.
 
-When we don't want JS to block the execution of our 
-code (i.e. API calls, grabbing data from a database, optimizing an image) we use a promise so that the 
-task happens in the background. When the promise gets resolved or rejected, we'll receive the response 
+When we don't want JS to block the execution of our
+code (i.e. API calls, grabbing data from a database, optimizing an image) we use a promise so that the
+task happens in the background. When the promise gets resolved or rejected, we'll receive the response
 accordingly.
 
 #### What else makes promises powerful?
@@ -153,22 +156,69 @@ const promise = new Promise((resolve, reject) => {
 })
 
 const promise2 = new Promise((resolve, reject) => {
-    setTimeout(resolve, 100, 'Hayowdeh')
+  setTimeout(resolve, 100, 'Hayowdeh')
 })
 
 const promise3 = new Promise((resolve, reject) => {
-    setTimeout(resolve, 1000, 'Bah-bah-bah-boogie')
+  setTimeout(resolve, 1000, 'Bah-bah-bah-boogie')
 })
 
 const promise4 = new Promise((resolve, reject) => {
-    setTimeout(resolve, 3000, 'Bawitaba')
+  setTimeout(resolve, 3000, 'Bawitaba')
 })
 
-Promise.all([promise, promise2, promise3, promise4])
-    .then(values => {
-    console.log(values);
+Promise.all([promise, promise2, promise3, promise4]).then(values => {
+  console.log(values)
 })
-
 ```
+
 The console waits until **all** of the promises above are resolved, then
-returns the values of each simultaneously.
+returns the values of each simultaneously. What's above is a bit academic, 
+so here's a more real world example, using the **jsonplaceholder** API:
+
+```js
+const urls = [
+'https://jsonplaceholder.typicode.com/users',
+'https://jsonplaceholder.typicode.com/posts',
+'https://jsonplaceholder.typicode.com/albums',
+]
+```
+How can we grab all of these, all important for the profile page of our user?
+Using promises, 
+
+```js
+const urls = [
+'https://jsonplaceholder.typicode.com/users',
+'https://jsonplaceholder.typicode.com/posts',
+'https://jsonplaceholder.typicode.com/albums',
+]
+
+Promise.all(urls.map(url => {
+    return fetch(url).then(resp=> resp.json())
+})).then(results => {
+    console.log(results[0])
+    console.log(results[1])
+    console.log(results[2])
+})
+```
+
+This logs the arrays in the console, as expected.  But what if something should fail?
+What if we misspelled a URL?
+A method to catch the error would be...
+
+```js
+const urls = [
+'https://jsonplaceholder.typocode.com/users',
+'https://jsonplaceholder.typicode.com/posts',
+'https://jsonplaceholder.typicode.com/albums',
+]
+
+Promise.all(urls.map(url => {
+    return fetch(url).then(resp=> resp.json())
+})).then(results => {
+    console.log(results[0])
+    console.log(results[1])
+    console.log(results[2])
+}).catch(() => console.log('error'))
+```
+
