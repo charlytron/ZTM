@@ -77,7 +77,7 @@ Promise.all(urls.map((url) => fetch(url).then((resp) => resp.json())))
   })
   .catch("oops!");
 
-// Written in async syntax
+// The second code block above, written in async syntax
 
 const getData = async function () {
   const [users, posts, albums] = await Promise.all(
@@ -88,3 +88,22 @@ const getData = async function () {
   console.log("albums", albums);
 };
 ```
+We're not catching errors with this method, which some don't like, but
+we can get used to that with try-catch blocks.
+
+```js
+const getData = async function () {
+  try {
+        const [users, posts, albums] = await Promise.all(urls.map((url) => 
+            fetch(url).then((resp) => resp.json())
+));
+  console.log("users", users);
+  console.log("posts", posts);
+  console.log("albums", albums);
+} catch (err) {
+  console.log('Oopsie Daisy', err)
+}
+    }
+  
+```
+Now, if we misspell one of the URLs the console will catch the error.
