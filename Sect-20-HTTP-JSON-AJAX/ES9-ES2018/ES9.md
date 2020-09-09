@@ -1,8 +1,6 @@
-<<<<<<< HEAD
+
 ### Three new features to focus on in ES9
-=======
-## New Focus Feature
->>>>>>> 46765d431b8fd2225f82d5ee431c07f1a779997f
+
 
 **Object Spread Operator**
 
