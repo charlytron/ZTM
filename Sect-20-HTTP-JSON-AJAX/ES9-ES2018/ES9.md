@@ -1,6 +1,6 @@
-### Three new features to focus on
+### New feature to focus on
 
-1. **Object Spread Operator**
+**Object Spread Operator**
 
 ```js
 const animals = {
