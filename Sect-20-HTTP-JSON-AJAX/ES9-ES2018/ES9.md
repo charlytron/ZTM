@@ -1,8 +1,11 @@
 
 ### Three new features to focus on in ES9
 
+---
 
 **Object Spread Operator**
+
+---
 
 ```js
 const animals = {
