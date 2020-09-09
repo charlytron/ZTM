@@ -66,11 +66,9 @@ const { tiger, lion, ...rest } = animals
 objectSpread(tiger, lion, rest)
 ```
 
-### Now, for the other two features of ES9
-
 ---
 
-#### 1. Finally
+#### Finally()
 
 ---
 
