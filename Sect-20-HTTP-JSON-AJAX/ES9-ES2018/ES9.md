@@ -67,7 +67,7 @@ objectSpread(tiger, lion, rest)
 
 ---
 
-####1. Finally
+#### 1. Finally
 
 ---
 
