@@ -1,4 +1,4 @@
-### New feature to focus on
+## New Focus Feature
 
 **Object Spread Operator**
 
