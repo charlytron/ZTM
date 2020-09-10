@@ -17,10 +17,10 @@ const animals = {
 const { tiger, ...rest } = animals
 ```
 
-So this works when we paste it into the console; plug in _tiger_ and it prints _23_.
+The above code runs when we paste it into the console. Plug in _tiger_ and it prints _23_.
 Plug in _rest_ and the remaining animals are shown.
 
-This we could accomplish with **arrays** in ES6:
+We accomplish similar tasks with with **arrays** in ES6:
 
 ```js
 const animals = {
@@ -37,15 +37,15 @@ function sum (a, b, c, d, e) {
 const { tiger, ...rest } = animals
 ```
 
-With _sum(...array)_ we're able to spread the above array over the parameters so that it's the
+With _sum(...array)_ we're able to spread the above array over the parameters. To the console, it's the
 same as
 
 ```js
 sum(1, 2, 3, 4, 5)
 ```
 
-to the console. The new feature **object spread operator** allows us to do the same, but with objects.
-In the same manner:
+The **object spread operator** allows us to do the same, but with objects, of course.
+
 
 ```js
 const animals = {
@@ -72,11 +72,12 @@ objectSpread(tiger, lion, rest)
 
 ---
 
-Allows us to do something after a promise has finished.
-We add the **finally()** block at the end, and it
-will be called, regardless of whether **.then()**
-or **.catch()** works for us. It will be called, whether
-it resolves or rejects and does what we tell it.
+Allows us to run code after a promise has finished.
+When add the **finally()** block at the end, it
+will be called regardless of whether **.then()**
+or **.catch()** is working for us. _Finally()_ does 
+what we specify, and it will be called, whether
+our promises are resolved or rejected. 
 
 ```js
 const urls = [
@@ -99,7 +100,7 @@ Promise.all(
   .finally(data => console.log('extry data, yo'))
 ```
 
-The arrays are returned as well as the **finally()** string,
+The arrays above are returned as well as the **finally()** string,
 but what happens if we throw an error after **.then()**?
 
 ```js
