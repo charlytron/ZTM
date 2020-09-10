@@ -1,4 +1,3 @@
-
 ### Three new features to focus on in ES9
 
 ---
@@ -11,10 +10,10 @@
 const animals = {
   tiger: 23,
   lion: 5,
-  monkey: 2
-}
+  monkey: 2,
+};
 
-const { tiger, ...rest } = animals
+const { tiger, ...rest } = animals;
 ```
 
 The above code runs when we paste it into the console. Plug in _tiger_ and it prints _23_.
@@ -26,44 +25,43 @@ We accomplish similar tasks with with **arrays** in ES6:
 const animals = {
   tiger: 23,
   lion: 5,
-  monkey: 2
+  monkey: 2,
+};
+
+const array = [1, 2, 3, 4, 5];
+function sum(a, b, c, d, e) {
+  return a + b + c + d + e;
 }
 
-const array = [1, 2, 3, 4, 5]
-function sum (a, b, c, d, e) {
-  return a + b + c + d + e
-}
-
-const { tiger, ...rest } = animals
+const { tiger, ...rest } = animals;
 ```
 
 With _sum(...array)_ we're able to spread the above array over the parameters. To the console, it's the
 same as
 
 ```js
-sum(1, 2, 3, 4, 5)
+sum(1, 2, 3, 4, 5);
 ```
 
 The **object spread operator** allows us to do the same, but with objects, of course.
-
 
 ```js
 const animals = {
   tiger: 23,
   lion: 5,
   monkey: 2,
-  bird: 40
+  bird: 40,
+};
+
+function objectSpread(p1, p2, p3) {
+  console.log(p1);
+  console.log(p2);
+  console.log(p3);
 }
 
-function objectSpread (p1, p2, p3) {
-  console.log(p1)
-  console.log(p2)
-  console.log(p3)
-}
+const { tiger, lion, ...rest } = animals;
 
-const { tiger, lion, ...rest } = animals
-
-objectSpread(tiger, lion, rest)
+objectSpread(tiger, lion, rest);
 ```
 
 ---
@@ -75,29 +73,29 @@ objectSpread(tiger, lion, rest)
 Allows us to run code after a promise has finished.
 When add the **finally()** block at the end, it
 will be called regardless of whether **.then()**
-or **.catch()** is working for us. _Finally()_ does 
+or **.catch()** is working for us. _Finally()_ does
 what we specify, and it will be called, whether
-our promises are resolved or rejected. 
+our promises are resolved or rejected.
 
 ```js
 const urls = [
-  'https://jsonplaceholder.typicode.com/users',
-  'https://jsonplaceholder.typicode.com/posts',
-  'https://jsonplaceholder.typicode.com/albums'
-]
+  "https://jsonplaceholder.typicode.com/users",
+  "https://jsonplaceholder.typicode.com/posts",
+  "https://jsonplaceholder.typicode.com/albums",
+];
 
 Promise.all(
-  urls.map(url => {
-    return fetch(url).then(resp => resp.json())
+  urls.map((url) => {
+    return fetch(url).then((resp) => resp.json());
   })
 )
-  .then(results => {
-    console.log(results[0])
-    console.log(results[1])
-    console.log(results[2])
+  .then((results) => {
+    console.log(results[0]);
+    console.log(results[1]);
+    console.log(results[2]);
   })
-  .catch(() => console.log('error'))
-  .finally(data => console.log('extry data, yo'))
+  .catch(() => console.log("error"))
+  .finally((data) => console.log("extry data, yo"));
 ```
 
 The arrays above are returned as well as the **finally()** string,
@@ -105,24 +103,24 @@ but what happens if we throw an error after **.then()**?
 
 ```js
 const urls = [
-  'https://jsonplaceholder.typicode.com/users',
-  'https://jsonplaceholder.typicode.com/posts',
-  'https://jsonplaceholder.typicode.com/albums'
-]
+  "https://jsonplaceholder.typicode.com/users",
+  "https://jsonplaceholder.typicode.com/posts",
+  "https://jsonplaceholder.typicode.com/albums",
+];
 
 Promise.all(
-  urls.map(url => {
-    return fetch(url).then(resp => resp.json())
+  urls.map((url) => {
+    return fetch(url).then((resp) => resp.json());
   })
 )
-  .then(results => {
-    throw Error
-    console.log(results[0])
-    console.log(results[1])
-    console.log(results[2])
+  .then((results) => {
+    throw Error;
+    console.log(results[0]);
+    console.log(results[1]);
+    console.log(results[2]);
   })
-  .catch(() => console.log('error'))
-  .finally(data => console.log('extry data, yo'))
+  .catch(() => console.log("error"))
+  .finally((data) => console.log("extry data, yo"));
 ```
 
 As soon as `throw error` is reached JS skips over the rest
@@ -166,13 +164,23 @@ but the latter is more elegant.
 
 ```javascript
 const getData2 = async function () {
-  const arrayOfPromises = urls.map(url => fetch(url))
+  const arrayOfPromises = urls.map((url) => fetch(url));
   for await (let request of arrayOfPromises) {
-    const data = await request.json()
-    console.log(data)
+    // extract the data from the array
+    const data = await request.json();
+    console.log(data);
   }
-}
+};
 ```
 
-This is the new ES2018 feature. It's significant in allowing us to
-loop over multiple promises, _almost as if we're writing synchronous code_.
+We use the **await** keyword in front of a promise. As we know, we're using the **await** keyword because
+we're _looping over_ promises, and we need to await `request.json()` which is a promise that receives our data, similar to how we did within the first getData() block, with `const response = await.fetch(url);`
+
+We use `console.log(data)` to see what is returned from the request.
+
+Copying the URLs along with the `getData2()` block and pasting them into the console will give us "undefined" when we hit enter. Entering getData2() at the cursor should give the arrays that we have
+requested from **jsonplaceholder**.
+
+`getData2()` shows us the new ES2018 feature. It's significant in allowing us to
+loop over multiple promises, _almost as if we're writing synchronous code_. **For await of** takes each
+item from an array of promises, returning to us--in the correct order--all of the responses.
