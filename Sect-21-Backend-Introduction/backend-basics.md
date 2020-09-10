@@ -42,20 +42,20 @@ conversation.
 
 ---
 
-They're the ones that work with servers and databases. A server is
+They're the ones that work with servers and databases, and the server is
 responsible for what we view in the browser. From the browser, we can ask anything; go to
 Google.com, whatever. What matters is that the web server can give us whatever it is programmed
 to give us.
 
-If it's just going to send me to twitter.com instead--in the case of a header redirect perhaps--
-that's up to the server.
+If the just going to send me to twitter.com instead--in the case of a header redirect perhaps--
+that's up to the backend developer.
 
 Whatever we need we request that of the server, hoping that it delivers what we ask.
 
 A server is just a computer that listens to HTTP connections, that 'hears' our questions and asks us
-if we have any files, and it leverages the **LAMP** stack to do this.
+if we have any files.  It leverages the **LAMP** stack to do this.
 
-LAMP was useful for the most basic of websites; simple and informative (i.e Wordpress), where nothing
+LAMP was useful for the most basic of websites; simple and informative, like Wordpress, where nothing
 complex is happening.
 
 - **Linux** server
@@ -78,26 +78,31 @@ complex is happening.
 
 #### Modern websites like Facebook or Amazon cannot use the LAMP stack
 
-It's for very basic sites. What we need is an **application server**.
+LAMP is for very basic sites. What we need is an **application server**.
 
 ---
 
-Unlike using Apache, a **Node server** with Node.js running allows you to write a script which says, "if
+Unlike Apache, a **Node server** allows us to write a script which says, "if
 I receive a request fo a login, then check the user's username in the database. If it matches, let me know, then send a response through JSON to the frontend application.
 
 So far, we've only been able to use JS on the frontend, but now with Node.js we can use it on the server;
 on a computer that isn't running a web browser.
 
-With Node.js we can write Javascript such that if we post something on Facebook, and there is a click event, the post will get sent to the listening Node server, saying we just posted the message in JSON
-format. The Node.JS and Express.js file on the server will read it and will say "we want to store this post our database." The database is going to store the post so that when we come back next time it's still there.
+With Node.js we can write Javascript such that if we post something on Facebook, and we generate, say, a click event, the post will get sent via JSON to the listening Node serve, telling it we just posted something.
+
+The Node.JS and Express.js file on the server will read the JSON and will say "we want to store this post our database." The database is going to store the post so that when we the users come back next time it's still there.
 
 Once that's done, the database is going to respond with a success, saying that my post is a success, that it displays on my timeline.
 
-Next project will create a Node server, using Express.js. We'll create our own database, where we store user information., and we'll be using AJAX and JSON to constantly create, sign in, update user info, all to have a complete understanding of the Node system.
+In our next project, we will create a Node server, using Express.js. Then we'll create our own database, where we store user information. we'll be using AJAX and JSON to constantly create, sign in, update user info. all This should give us a complete understanding of the Node system.
 
 If we're building websites and web apps, we're not really building these. Is this the ultimate end all
-to what is possible in a server backend infrastructure? We haven't even considered load balancers yet.
-We haven't yet considered copying servers in order to scale an application. This is something that Facebook uses. But all those copied servers still use the same database such that all servers will have access to
+to what is possible in a server backend infrastructure? No.
+
+We haven't even considered what would warrant load balancers yet.
+At some point though, we may need to consider copying servers in order to scale an application. This is something that Facebook uses. 
+
+In many cases those copied servers still use the same database such that all servers will have access to
 the same data.
 
 A **load balancer** may listen for an HTTP request and notice that one of its servers is very busy. It will
