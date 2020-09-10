@@ -8,7 +8,7 @@
 
 - We began asking _who is google.com?_, then we approached the ISP, asking for the **nameserver**
   for the IP address.
-- We then ask the IP address to find the Google servers which give us our HTML, CSS and JS files through the following:
+- Upon receiving the nameserver, we asked the IP address to find the Google servers in order to give us our HTML, CSS and JS files through these channels:
   - HTML page itself
   - `<link>` tag for CSS
   - `<script>` tag for JS
