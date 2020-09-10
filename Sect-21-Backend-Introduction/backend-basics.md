@@ -18,6 +18,8 @@
 
 - We manipulate the DOM using Javascript.
 
+Some other things important to backend developers:
+
 - The location of the server is important
 
 - how many trips, how many HTTP requests
