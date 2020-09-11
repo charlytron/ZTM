@@ -8,9 +8,9 @@
 
 So, what happens when we navigate to a website?
 
-- We ask _who is google.com?_, then we approached the ISP, asking for the **name server**
+- We ask _who is google.com?_ Then we approached the ISP, asking for the **name server**
   for the IP address.
-- Upon receiving the name server, we asked the IP address to find the Google servers in order to give us our HTML, CSS and JS files through these means:
+- Upon receiving the name server, we asked the IP address to find the Google servers so that they may give us our HTML, CSS and JS files through these means:
   - HTML page itself
   - `<link>` tag for CSS
   - `<script>` tag for JS
