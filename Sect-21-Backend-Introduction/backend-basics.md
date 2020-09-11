@@ -51,18 +51,15 @@ what we view in the browser. From the browser, we can ask anything; go to
 Google.com, whatever. The web server can give us whatever it is programmed
 to give us.
 
-Maybe the server is just going to send me to twitter.com instead, in the case of a header redirect? 
+Maybe the server is just going to send me to twitter.com instead, in the case of a header redirect?
 Again, that's up to the backend developer.
 
 Whatever we need we request that of the server, hoping that it delivers what we ask.
 
 A server is just a computer that listens to HTTP connections, that 'hears' our questions and asks us
-<<<<<<< HEAD
+
 
 if we have any files. In simpler use cases the server leverages the **LAMP** stack to do this.
-=======
-if we have any files.  In simpler use cases the server leverages the **LAMP** stack to do this.
->>>>>>> 06b9a37... miscellaneous edits
 
 
 What's in the acronym?
@@ -82,17 +79,11 @@ What's in the acronym?
 - **PHP**
   - A procedural language
   - allows us to apply conditional logic to how our servers work.
-  
+
 LAMP was useful for the most basic of websites; simple and informative, like Word Press, where nothing
 complex is happening.
 
-<<<<<<< HEAD
-=======
-LAMP was useful for the most basic of websites; simple and informative, like Word Press, where nothing
-complex is happening.
 
->>>>>>> 06b9a37... miscellaneous edits
----
 
 #### Modern websites like Facebook or Amazon cannot use the LAMP stack though.
 
@@ -112,10 +103,7 @@ With Node.js we can write Javascript such that if we post something on Facebook,
 The Node.JS and Express.js file on the server will read the JSON and will say "we want to store this post our database." The database is going to store the post so that when we the users come back next time it's still there.
 
 Once that's done, the database is going to respond favorably, saying that my post is a success, displaying it on my timeline.
-<<<<<<< HEAD
 
-=======
->>>>>>> 06b9a37... miscellaneous edits
 
 In our next project, we will create a Node server, using Express.js. Then we'll create our own database, where we store user information. we'll be using AJAX and JSON to constantly create, sign in, update user info. all This should give us a complete understanding of the Node system.
 
