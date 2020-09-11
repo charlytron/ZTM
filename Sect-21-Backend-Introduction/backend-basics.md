@@ -57,13 +57,11 @@ that's up to the backend developer.
 Whatever we need we request that of the server, hoping that it delivers what we ask.
 
 A server is just a computer that listens to HTTP connections, that 'hears' our questions and asks us
-<<<<<<< HEAD
-if we have any files. In simpler use cases the server leverages the **LAMP** stack to do this.
-=======
-if we have any files.  In simpler use cases the server leverages the **LAMP** stack to do this.
->>>>>>> ffc9e203590babe9c2b60ababc7dbc24f188c9ae
 
-What's in the acronym briefly tells us what the stack does:
+if we have any files. In simpler use cases the server leverages the **LAMP** stack to do this.
+
+
+What's in the acronym?
 
 - **Linux** server
 - **Apache** server
@@ -81,9 +79,6 @@ What's in the acronym briefly tells us what the stack does:
   - A procedural language
   - allows us to apply conditional logic to how our servers work.
   
-LAMP was useful for the most basic of websites; simple and informative, like Wordpress, where nothing
-complex is happening.
-
 LAMP was useful for the most basic of websites; simple and informative, like Wordpress, where nothing
 complex is happening.
 
@@ -106,11 +101,8 @@ With Node.js we can write Javascript such that if we post something on Facebook,
 
 The Node.JS and Express.js file on the server will read the JSON and will say "we want to store this post our database." The database is going to store the post so that when we the users come back next time it's still there.
 
-<<<<<<< HEAD
-Once that's done, the database will say that my post is a success, displaying it on my timeline.
-=======
 Once that's done, the database is going to respond favorably, saying that my post is a success, displaying it on my timeline.
->>>>>>> ffc9e203590babe9c2b60ababc7dbc24f188c9ae
+
 
 In our next project, we will create a Node server, using Express.js. Then we'll create our own database, where we store user information. we'll be using AJAX and JSON to constantly create, sign in, update user info. all This should give us a complete understanding of the Node system.
 
