@@ -4,7 +4,7 @@
 Application programming interface is a messenger that takes a request and
 tells the system what to do.  But what is it, exactly ;)
 
-_skyscanner.com_ is an aggregator website.  On it we look for a flight and it
+[Skyscanner](https://www.skyscanner.com) is an aggregator website.  On it we look for a flight and it
 searches all the website of airlines for the best deals. 
 
 How is it able to do thi?  Skyscanner does not store this information. The
