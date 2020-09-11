@@ -4,15 +4,15 @@
 An application programming interface is a messenger that takes a request and
 tells the system what to do.  Let's elaborate.
 
-[Skyscanner](https://www.skyscanner.com) is an aggregator website where we look for a flight, and it
-searches all the website of airlines for the lowest air fares. 
+[Skyscanner](https://www.skyscanner.com) is an aggregator website where we look for a flight, and its
+search algorithms scan the websites of airlines for their lowest air fares. 
 
 How is it able to do this?  Skyscanner does not store this information. The
 data is somewhere in the database of each individual airline.
 
 That said, not all potential customers will look to American Airlines website to
-evaluate air fares. Having their information listed on Skyscanner makes the airlines more money. But how is 
-Skyscanner able to display the prices without having this information themselves?
+evaluate air fares. If they allow their fares to be listed on these third-party sites, the airlines make more money. 
+But how is Skyscanner able to display the prices without having this information themselves?
 
 That's where APIs come in handy; they allow strangers to speak to eachother so
 that we aren't in a closed system. We can share data and work with eachother.
@@ -23,5 +23,6 @@ how web browsers speak with servers. But API itself is a broad topic, and it
 applies to the way that machines communicate.
 
 Something as simple as window.fetch() is really an API. 
+
 
 
