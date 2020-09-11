@@ -1,20 +1,17 @@
 # APIs
 ---
 
-Application programming interface is a messenger that takes a request and
-tells the system what to do.  But what is it, exactly ;)
+An application programming interface is a messenger that takes a request and
+tells the system what to do.  Let's elaborate.
 
-[Skyscanner](https://www.skyscanner.com) is an aggregator website.  On it we look for a flight and it
-searches all the website of airlines for the best deals. 
+[Skyscanner](https://www.skyscanner.com) is an aggregator website where we look for a flight, and it
+searches all the website of airlines for the lowest air fares. 
 
-How is it able to do thi?  Skyscanner does not store this information. The
-information is somewhere in the database of each individual airline.
+How is it able to do this?  Skyscanner does not store this information. The
+data is somewhere in the database of each individual airline.
 
-As an airline you have an interest in having your rates posted on Skyscanner
-because people who wish to book a flight might not go to the airline's 
-proprietary website.
-
-Having their information listed on Skyscanner makes them more money. How is 
+That said, not all potential customers will look to American Airlines website to
+evaluate air fares. Having their information listed on Skyscanner makes the airlines more money. But how is 
 Skyscanner able to display the prices without having this information themselves?
 
 That's where APIs come in handy; they allow strangers to speak to eachother so
