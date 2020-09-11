@@ -6,7 +6,9 @@
 
 ---
 
-- We began asking _who is google.com?_, then we approached the ISP, asking for the **nameserver**
+So, what happens when we navigate to a website?
+
+- We ask _who is google.com?_, then we approached the ISP, asking for the **nameserver**
   for the IP address.
 - Upon receiving the nameserver, we asked the IP address to find the Google servers in order to give us our HTML, CSS and JS files through these channels:
   - HTML page itself
@@ -18,9 +20,11 @@
 
 - We manipulate the DOM using Javascript.
 
+Some worthy backend concerns for frontend developers, before we dive deeper:
+
 - The location of the server is important
 
-- how many trips, how many HTTP requests
+- how many trips, how many HTTP requests are being made.
 
 - The size of the files
 
@@ -28,8 +32,8 @@
 
 - Minimizing our files (style.min.css)
 
-- **AJAX** taught us how to talk to the server,while the user
-  is still browsing the site, and receive a **JSON** response
+- **AJAX** taught us how to talk to the server (while the user
+  is still browsing the site) and receive a **JSON** response
   to update the website in realtime.
 
 HTTP is a language that both frontend and backend can speak.
@@ -53,10 +57,9 @@ that's up to the backend developer.
 Whatever we need we request that of the server, hoping that it delivers what we ask.
 
 A server is just a computer that listens to HTTP connections, that 'hears' our questions and asks us
-if we have any files.  It leverages the **LAMP** stack to do this.
+if we have any files. In simpler use cases the server leverages the **LAMP** stack to do this.
 
-LAMP was useful for the most basic of websites; simple and informative, like Wordpress, where nothing
-complex is happening.
+What's in the acronym briefly tells us what the stack does:
 
 - **Linux** server
 - **Apache** server
@@ -74,33 +77,36 @@ complex is happening.
   - A procedural language
   - allows us to apply conditional logic to how our servers work.
 
+LAMP was useful for the most basic of websites; simple and informative, like Wordpress, where nothing
+complex is happening.
+
 ---
 
-#### Modern websites like Facebook or Amazon cannot use the LAMP stack
+#### Modern websites like Facebook or Amazon cannot use the LAMP stack though.
 
-LAMP is for very basic sites. What we need is an **application server**.
+LAMP is for very basic sites. What we need is an **application server** that scales to
+accommodate the massive amount of data that comes with a large and growing user base.
 
 ---
 
 Unlike Apache, a **Node server** allows us to write a script which says, "if
-I receive a request fo a login, then check the user's username in the database. If it matches, let me know, then send a response through JSON to the frontend application.
+I receive a request for a login, then check the user's username in the database. If it matches, let me know, then send a response through JSON to the frontend application.
 
 So far, we've only been able to use JS on the frontend, but now with Node.js we can use it on the server;
 on a computer that isn't running a web browser.
 
-With Node.js we can write Javascript such that if we post something on Facebook, and we generate, say, a click event, the post will get sent via JSON to the listening Node serve, telling it we just posted something.
+With Node.js we can write Javascript such that if we post something on Facebook, and we generate, say, a click event, the post will get sent via JSON to the listening Node server, telling it we just posted something. Discrete tasks like this are no problem for Node, when it recognizes JSON.
 
 The Node.JS and Express.js file on the server will read the JSON and will say "we want to store this post our database." The database is going to store the post so that when we the users come back next time it's still there.
 
-Once that's done, the database is going to respond with a success, saying that my post is a success, that it displays on my timeline.
+Once that's done, the database will say that my post is a success, displaying it on my timeline.
 
 In our next project, we will create a Node server, using Express.js. Then we'll create our own database, where we store user information. we'll be using AJAX and JSON to constantly create, sign in, update user info. all This should give us a complete understanding of the Node system.
 
-If we're building websites and web apps, we're not really building these. Is this the ultimate end all
-to what is possible in a server backend infrastructure? No.
+If we're only building websites and web apps, do we really understand what is possible in a server backend infrastructure? No.
 
 We haven't even considered what would warrant load balancers yet.
-At some point though, we may need to consider copying servers in order to scale an application. This is something that Facebook uses. 
+At some point though, we may need to consider copying servers in order to scale an application. This is something that Facebook uses.
 
 In many cases those copied servers still use the same database such that all servers will have access to
 the same data.
