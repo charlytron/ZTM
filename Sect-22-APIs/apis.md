@@ -10,16 +10,16 @@ search algorithms scan the websites of airlines for their lowest air fares.
 How does Skyscanner do it?  They don't store the the flight information in their own databases;
 rather, this dynamic data is elsewhere, frequently updated in the database of each airline.
 
-Besides, Not all potential customers will look to American Airlines' website to
-evaluate air fares. Nowadays, a customer benefits from a more global perspective, from seeing on a page all
-of the fares of all available flights to their destination.
+And who needs Skyscanner? Well, not all potential customers will view one airline website to
+evaluate air fares. Nowadays, a customer benefits from a more global perspective, from seeing on a page 
+the fares of all available flights to their destination.
 
 So AA joins the game, allowing its fares to be listed on these third-party sites. 
 
-But how are Skyscanner's servers able to deliver the ever-changing fares of all airlines, all in one place?
-After all, they may only have remote access to the airlines' databases.
+But how are Skyscanner's servers able to deliver the ever-changing fares of all airlines
+that wish to fly me to Rio. After all, they may only have remote access to the airlines' databases.
 
-That's where APIs come in handy; they allow the airline and the third-party website to share data, to connect to 
+That's where API keys come in handy; they allow the airline and the third-party website to share data, to connect to 
 and communicate with what were once closed systems. These strangers can now wave to
 eachother, or at least make fetch requests.
 
