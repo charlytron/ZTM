@@ -10,14 +10,14 @@ search algorithms scan the websites of airlines for their lowest air fares.
 How is it able to do this?  Skyscanner does not store this information. The
 data is somewhere in the database of each airline.
 
-Not all potential customers will look to American Airlines website to
-evaluate air fares. If it allows its fares to be listed on these third-party sites, the airline has
-yet another revenue stream. But how is Skyscanner able to display the prices without having this 
-information themselves?
+Not all potential customers will look to American Airlines' website to
+evaluate air fares. If Americain allows its fares to be listed on these third-party sites, the airline has
+yet another revenue stream. But how are Skyscanner servers able to deliver the prices without having this 
+dynamic data themselves?
 
-That's where APIs come in handy; they allow strangers to share data so
-that they may connect to and communicate with what were once closed systems.
-(This would be anathema to the old school craft guilds, but that's another topic).
+That's where APIs come in handy; they allow strangers to share data, to connect to 
+and communicate with what were once closed systems. These strangers can now wave to
+eachother, or at least make fetch requests.
 
 An API allows computers to communicate remotely to achieve a common goal. It's resembles
 how web browsers speak with servers. 
