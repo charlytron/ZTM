@@ -8,7 +8,7 @@ tells the system what to do.  Let's elaborate.
 search algorithms scan the websites of airlines for their lowest air fares. 
 
 How is it able to do this?  Skyscanner does not store this information. The
-data is somewhere in the database of each individual airline.
+data is somewhere in the database of each airline.
 
 That said, not all potential customers will look to American Airlines website to
 evaluate air fares. If they allow their fares to be listed on these third-party sites, the airlines make more money. 
