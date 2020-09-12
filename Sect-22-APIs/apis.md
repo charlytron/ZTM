@@ -10,24 +10,26 @@ search algorithms scan the websites of airlines for their lowest air fares.
 How does Skyscanner do it?  They don't store the the flight information in their own databases;
 rather, this dynamic data is elsewhere, frequently updated in the database of each airline.
 
-Not all potential customers will look to American Airlines' website to
-evaluate air fares. If a customer benefits from seing the fares of  all airlines flying to their destination,
-then AA may wisely join in, allowing its fares to be listed on these third-party sites. 
+Besides, Not all potential customers will look to American Airlines' website to
+evaluate air fares. Nowadays, a customer benefits from a more global perspective, from seeing on a page all
+of the fares of all available flights to their destination.
 
-That said, how are Skyscanner's servers able to deliver the prices without having immediate local
-access to the data?
+So AA joins the game, allowing its fares to be listed on these third-party sites. 
+
+But how are Skyscanner's servers able to deliver the ever-changing fares of all airlines, all in one place?
+After all, they may only have remote access to the airlines' databases.
 
 That's where APIs come in handy; they allow the airline and the third-party website to share data, to connect to 
 and communicate with what were once closed systems. These strangers can now wave to
 eachother, or at least make fetch requests.
 
-An API allows computers to communicate remotely to achieve a common goal. It's resembles
+An API allows computers to communicate remotely to achieve a common goal, resembling
 how web browsers speak with servers. 
 
 Let's pace ourselves, though. The API is a broad topic, and we've only
 begun to explain it with what we've learned thus far.
 
-Something as simple as window.fetch() in the browser console is really an API. 
+Something as simple as window.fetch() in the browser console can be an API. 
 
 
 
