@@ -12,14 +12,15 @@ The data is dynamically updated off-site, within the database of each airline.
 
 If that's the case, the who needs Skyscanner? Both buyers and sellers, apparently.
 
-Not all potential buyers will view a proprietary airline website to
-evaluate air fares. Networked servers allow them to view on a page 
-the fares of all available flights to their cosen destination. 
+Not all potential buyers will use a proprietary airline website to
+buy their plane tickets, especially when Networked servers allow them to view on a page 
+the fares of all airlines, all available flights to a destination. 
 
-AA improves its optics by allowing its fares to be listed on these aggregator sites. 
+American Airlines clearly benefits by allowing its fares to be listed on these aggregator sites. 
 
-But how are Skyscanner's servers able to deliver the ever-changing fares of all these airlines?
-The airlines' databases need to be remotely linked somehow.
+But how are Skyscanner's servers able to deliver prices that the airline may quickly change?
+
+The aggregator and airline databases need to be remotely linked somehow.
 
 That's where API keys come in handy.They allow the airline and the third-party a venue for data sharing.
 Now each party may connect to and communicate with what were once closed systems. 
@@ -28,8 +29,8 @@ These strangers can now wave to eachother, or at least make fetch requests.
 An API allows computers to communicate remotely to achieve a common goal. The process resembles
 how web browsers speak with servers. 
 
-Let's pace ourselves, though. The API is a broad topic, and we've only
-begun to explain it with what we've learned thus far.
+This is nutshell knowledge, though. The API is a broad topic, and we've only
+begun to explain it with what we've learned.
 
 Something as simple as window.fetch() in the browser console can be an API. 
 
