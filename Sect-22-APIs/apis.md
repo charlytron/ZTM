@@ -22,7 +22,7 @@ But how are Skyscanner's servers able to deliver prices that the airline may qui
 
 The aggregator and airline databases need to be remotely linked somehow.
 
-That's where API keys come in handy.They allow the airline and the third-party a venue for data sharing.
+That's where API keys come in handy. They allow the airline and the aggregator a venue for data sharing.
 Now each party may connect to and communicate with what were once closed systems. 
 These strangers can now wave to eachother, or at least make fetch requests.
 
