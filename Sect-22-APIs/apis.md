@@ -61,7 +61,7 @@ browser.
 
 The API tells us how to communicate with React and enables us to do so. 
 
-Also, remember our jsonplaceholder example
+Also, remember our example,
 [jsonplaceholder](https://jsonplaceholder.typicode.com/)? The users that we
 fetched?  The website is a fake online REST API for testing and prototyping.
 
