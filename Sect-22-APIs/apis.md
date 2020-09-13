@@ -52,10 +52,10 @@ Imagine making AJAX calls to a server; it's very similar. We're asking another
 machine for something, using a go-between, and the machine gives us a response,
 as long as we talk to that machine in it's own language.
 
-The server's API is a language for us to communicate remotely with it.  In the
-same way, we have our previous code, from when we built Robofriends.
+The server's API allows us to talk to the server across the internet. Similarly,
+we used APIs when we built Robofriends.
 
-Our use of ReactJS exposes an API, a way to communicate with the React package
+Our use of ReactJS exposes an API. It's a way to communicate with the React package
 by importing React, extending the component and using JSX to render HTML in the
 browser.
 
