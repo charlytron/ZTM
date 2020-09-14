@@ -86,8 +86,60 @@ A developer working on a company's behalf may grab bits and pieces of data from
 many different websites, thus outsourcing some of the data management to open
 APIs.
 
-With the GitHub API, we can access the Facebook repository for lists of 
-followers, public repositories, and so on.  All the data is in JSON format 
+With the GitHub API, we can access the [Facebook repository](https://api.github.com/users/facebook) 
+for lists of followers, public repositories, and so on.  
+All the data is in JSON format 
 
+If we want to build something with GitHub, we can send a request to 
+[the API subdomain of GitHub](https://api.github.com/users/facebook),
+get the data and create our website based on the data. 
 
+We can utilize both XML as well as JSON to build our site. Here is a 
+[sample API in XML](https://www.w3schools.com/xml/simple.xml) that
+shows us a breakfast menu. We can request this data through HTTP
+and get our breakfast menu returned.
+
+#### APIs are not just websites. 
+
+- By definition, a TV is an API by virtue  of all
+the components that it links to.
+
+- An NPM package can be an API. 
+
+- Again, they are a way for machines to communicate, to share information. 
+
+- Without APIs, the World Wide Web, as we now know it woudm't exist.
+
+#### How is this useful to us?
+
+We may build an airline aggregator site like [Skyscanner](https://www.skyscanner.com)
+quite easily. We search for all the available airline APIs, and they'll tell us 
+how to access this data.
+
+An aggregator merely makes an HTTP request to the API, say a [posts
+subfolder](https://jsonplacehoder.typicode.com/posts), grabs the data and adds
+some CSS to it.
+
+There are scores of APIs online, even silly ones, like the [Star Wars
+API](swapi.dev). We can build a sample app using these APIs, an all we need to
+do is write 
+```js
+fetch('https://url.com/resource')
+```
+get the JSON response and
+convert it to a Javascript object, then style it and use it in your app.
+
+Some very useful APIs include the [Stripe API](https://stripe.com/docs/api/node#balance_object),
+for incorporating payments into our websites.  The API docs show us exactly how.
+
+With Stripe's API we can add to our server whichever language we want.  In our
+case, we're interested in Node. We're given complete directions about how to add 
+Stripe as a payment method via Node on our server. The process is well explained
+in the docs.
+
+[Twillio's API](https://www.twilio.com/docs/sms/send-messages) is also quite
+useful. Twillio allows sending messages to phones. We just give it a few
+details, including the text body, the source and destination phone numbers.
+
+When a user signs up for a service, we can send them a message this way. 
 
