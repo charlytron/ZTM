@@ -143,3 +143,21 @@ details, including the text body, the source and destination phone numbers.
 When a user signs up for a service, we can send them a message this through the
 Twillio API. 
 
+The premise of this service isn't as silly as [SWAPI](www.swapi.dev), though. It's
+premium software, more carefully engineered, and developers need to eat.
+
+In such cases we need to use an API key to add this functionality.  It looks like 
+gibberish; it's a private key. Every time you access that API, however, they know that it's you.
+
+If you purchased a plan for making 1000 requests, Twillio will charge you accordingly.
+
+In our final project we'll be using a machine learning API. We'll generate our API key and 
+use it, but for free.
+
+### Main Takeaways of APIs
+
+- A company server somewhere provides one, along with the requisite documentation.   
+- Most comply with a standard like JSON to make it easier for developers to use.
+- They are tools for data communication.
+- APIs open up possibilities of making websites that do more than present static information.
+ 
