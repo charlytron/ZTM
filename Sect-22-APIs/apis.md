@@ -126,7 +126,7 @@ do is write
 ```js
 fetch('https://url.com/resource')
 ```
-get the JSON response and
+get the JSON response,
 convert it to a Javascript object, then style it and use it in our app.
 
 Some very useful APIs include the [Stripe API](https://stripe.com/docs/api/node#balance_object),
