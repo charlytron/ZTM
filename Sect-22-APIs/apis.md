@@ -1,39 +1,39 @@
 # APIs
 ---
 
-An application programming interface is a messenger that takes a request and
-tells the system what to do.  That's a rather basic explanation, though; let's elaborate.
+An application programming interface is basically a messenger that takes a request and
+tells the system what to do. But that's a skeletal description, so let's elaborate.
 
-[Skyscanner](https://www.skyscanner.com) is an aggregator website. We use its search algorithms scan the websites of airlines for their lowest air fares. 
+[Skyscanner](https://www.skyscanner.com) is an aggregator website. We use its search algorithms, 
+and they will scan the websites of airlines, looking for lowest air fares. 
 
-How does Skyscanner store this information if it doesn't exist in their own databases?
+How does Skyscanner store this information if it doesn't exist in it's own databases?
 
-The data is dynamically updated off-site, within the database of each airline.
+After all, The data is dynamically updated off-site, within the database of each airline.
 
 If that's the case, the who needs Skyscanner? Both buyers and sellers, apparently.
 
-Not all potential buyers will use a proprietary airline website to
-buy their plane tickets, especially when Networked servers allow them to view on a page 
+Not all potential buyers will use [American Airlines' proprietary website](https://www.aa.com) to
+buy their plane tickets, especially when networked servers allow them to view on a page 
 the fares of all airlines, all available flights to a destination. 
 
-American Airlines may well benefit by allowing its fares to be listed on these aggregator sites. 
+Indeed, American Airlines may benefit by allowing its fares to be listed on these aggregator sites. 
 
 But how are Skyscanner's servers able to deliver prices that the airline may quickly change?
 
-The aggregator and airline databases need to be remotely linked somehow.
+The aggregator and airline databases would need to be remotely linked somehow, right?
 
-That's where API keys come in handy. They allow the airline and the aggregator a venue for data sharing.
+That's where APIs come in handy. They allow the airline and the aggregator a venue for data sharing.
 Now each party may connect to and communicate with what were once closed systems. 
 These strangers can now wave to eachother, or at least make fetch requests.
 
-An API allows computers to communicate remotely to achieve a common goal. The process resembles
+We might say that an API allows computers to communicate remotely to achieve a common goal. The process resembles
 how web browsers speak with servers. 
 
-This is nutshell knowledge, though. The API is a broad topic, and we've only
-begun to explain it with what we've learned.
+This is a nutshell knowledge, though. The API is a broad topic.
 
-Something as simple as window.fetch() in the browser console can be an API. The browser provides 
-us fetch() so that we may communicate with another machine; the console may
+Something as simple as _window.fetch_ in the browser console can be an API. The browser provides 
+us fetch() so that we may communicate with another machine; so that the console may
 communicate with the browser.
 
 In the same way, although [Skyscanner]( https://www.skyscanner.com) doesn't
@@ -48,12 +48,12 @@ the deliverable product.
 The waiter goes out, asks the customer what she wants, and her reply allows the
 kitchen to prepare the order.
 
-Imagine making AJAX calls to a server; it's very similar. We're asking another
-machine for something, using a go-between, and the machine gives us a response,
-as long as we talk to that machine in it's own language.
+AJAX makes similar calls to a server. We're asking another
+machine for something, using a go-between, and the machine gives us a response.
+We need only talk to that machine in it's own language.
 
-The server's API allows us to talk to the server across the internet. Similarly,
-we used APIs when we built Robofriends.
+The remote server's API allows us to talk to the that server across the internet. Yet
+we also used APIs when we build React websites, like [Robofriends](https://charlytron.github.io/robofriend).
 
 Our use of ReactJS exposes an API. It's a way to communicate with the React package
 by importing React, extending the component and using JSX to render HTML in the
@@ -71,8 +71,8 @@ us we may access the resources by directing our URL to the listed subfolders of
 the website.
 
 If we wish to access 'comments' it's as simple as adding a forward slash to the
-end of the URL, [thusly](https://jsonplaceholder.typicode.com/users), returning
-a response of 100 posts, written in JSON.
+end of the URL, [thusly](https://jsonplaceholder.typicode.com/posts), returning
+a response of posts, written in JSON.
 
 [Robohash](https://robohash.org/) works in a similar fashion. We're able to get
 images of robots from a website via a very simple API. Put any expected
@@ -80,7 +80,7 @@ characters after the forward slash at the end of that URL, and Robohash will
 return a random SVG of a robot.
 
 Businesses find APIs quite useful, and they may benefit by complying with
-industry standards, including handling JSON responses. 
+industry standards, including handling JSON responses in their websites. 
 
 A developer working on a company's behalf may grab bits and pieces of data from
 many different websites, thus outsourcing some of the data management to open
@@ -97,9 +97,9 @@ get the data and create our website based on the data.
 We can utilize both XML as well as JSON to build our site. Here is a 
 [sample API in XML](https://www.w3schools.com/xml/simple.xml) that
 shows us a breakfast menu. We can request this data through HTTP
-and get our breakfast menu returned.
+and return that data.
 
-#### APIs are not just websites. 
+#### Let's be clear: APIs are not just websites. 
 
 - By definition, a TV is an API by virtue  of all
 the components that it links to.
@@ -127,19 +127,19 @@ do is write
 fetch('https://url.com/resource')
 ```
 get the JSON response and
-convert it to a Javascript object, then style it and use it in your app.
+convert it to a Javascript object, then style it and use it in our app.
 
 Some very useful APIs include the [Stripe API](https://stripe.com/docs/api/node#balance_object),
 for incorporating payments into our websites.  The API docs show us exactly how.
 
 With Stripe's API we can add to our server whichever language we want.  In our
 case, we're interested in Node. We're given complete directions about how to add 
-Stripe as a payment method via Node on our server. The process is well explained
-in the docs.
+Stripe as a payment method via Node on our server.
 
 [Twillio's API](https://www.twilio.com/docs/sms/send-messages) is also quite
 useful. Twillio allows sending messages to phones. We just give it a few
 details, including the text body, the source and destination phone numbers.
 
-When a user signs up for a service, we can send them a message this way. 
+When a user signs up for a service, we can send them a message this through the
+Twillio API. 
 
