@@ -11,10 +11,10 @@ How does Skyscanner store this information if it doesn't exist in it's own datab
 
 After all, The data is dynamically updated off-site, within the database of each airline.
 
-If that's the case, the who needs Skyscanner? Both buyers and sellers, apparently.
+If that's the case, then who needs Skyscanner? Both buyers and sellers, apparently.
 
 Not all potential buyers will use [American Airlines' proprietary website](https://www.aa.com) to
-buy their plane tickets, especially when networked servers allow them to view on a page 
+buy their plane tickets, especially when networked servers allow them to view on an aggregator site 
 the fares of all airlines, all available flights to a destination. 
 
 Indeed, American Airlines may benefit by allowing its fares to be listed on these aggregator sites. 
